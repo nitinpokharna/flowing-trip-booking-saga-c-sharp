@@ -31,3 +31,10 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'PublishProfile'
+    PublishProfilePath: 'nitinapp.publishSettings'
+    PublishProfilePassword: 'M6HEHgoCkcataZjrFnipD97w0K6bWQv6H1LH2Mw4bGFoybkKJD0BvsPAuKvx'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
