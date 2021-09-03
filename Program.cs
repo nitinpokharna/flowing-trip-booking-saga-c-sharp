@@ -35,7 +35,7 @@ namespace FlowingTripBookingSaga
             Console.WriteLine(logo + "\n\n" + "Deploying models and start workers.\n\nPRESS ANY KEY TO STOP WORKERS.\n\n");
 
             camunda = new CamundaEngineClient(
-                new System.Uri("http://localhost:8080/engine-rest/engine/default/"), null, null);
+                new System.Uri("http://20.75.160.66:8050/engine-rest/engine/default/"), null, null);
 
             // Alternative way of doing it: Search assembly and automatically deploy all models to Camunda and start all found workers
             // camunda.Startup();
